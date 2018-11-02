@@ -53,7 +53,7 @@ function getUserName($id_user) {
     $query = $connection->prepare($sql);
     $query->bindParam(1, $id_user);
     $query->execute();
-    return $query->fetchAll(PDO::FETCH_ASSOC)[0]["id_user"];
+    return $query->fetchAll(PDO::FETCH_ASSOC)[0]["name"];
 }
 
 function getUserPass($id_user) {
@@ -116,3 +116,17 @@ function checkUser($email, $password) {
         }
     }
 }
+
+function getAllEmployees($admin) {
+    if ($admin) {
+        $sql = "SELECT id_user, creation_date, visible, permissions, name, last_name FROM addemployee_employees";
+    } else {
+        $sql = "SELECT id_user, creation_date, name, last_name FROM addemployee_employees WHERE visible = 0";
+    }
+    $connection = new Database();
+    $query = $connection->prepare($sql);
+    $query->execute();
+    return $query->fetchAll(PDO::FETCH_ASSOC);
+}
+
+?>

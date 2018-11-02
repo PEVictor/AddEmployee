@@ -19,7 +19,6 @@ CREATE TABLE addemployee_employees (
 	visible INT NOT NULL,
 	permissions VARCHAR(3) NOT NULL,
 	name VARCHAR(255),
-	last_name VARCHAR(255),
 	FOREIGN KEY (id_user) REFERENCES addemployee_user(id),
 	PRIMARY KEY (id)
 );
@@ -36,4 +35,7 @@ CREATE TABLE addemployee_documents (
 /*
 user: admin@admin.com
 pass: PhzHRPdbxoSR
+
+user: user@admin.com
+pass: S7TEeIj5na71 
 */

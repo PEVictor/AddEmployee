@@ -1,10 +1,10 @@
-<h2>Welcome, <?php echo $name; ?></h2>
-<a href="?nav=close">Close session</a>
-<div>
-	<div>
-		<a href="#">Employee List</a>
-	</div>
-	<div>
-		<a href="#">Documents List</a>
+<div class="container">
+	<div class="row d-flex align-items-stretch">
+		<a href="?nav=employees" class="col bg-light mr-2">
+			<h2 class="display-4">Employee List</h2>
+		</a>
+		<a href="?nav=documents" class="col bg-light mr-2">
+			<h2 class="display-4">Documents List</h2>
+		</a>
 	</div>
 </div>

@@ -1,7 +1,0 @@
-{
-    "require": {
-        "setasign/fpdf": "1.8.1",
-        "phpmailer/phpmailer": "6.0",
-        "twbs/bootstrap": "4.1"
-    }
-}
